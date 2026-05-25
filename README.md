@@ -1,270 +1,262 @@
-# 🤖 JARVIS AI OS
+# 🤖 VRINDA AI
 
-> A futuristic AGI-inspired AI operating assistant built with autonomous agents, memory systems, voice interaction, reasoning engines, and real-time automation.
-
-![Banner](https://img.shields.io/badge/AI-JARVIS-blue)
-![Status](https://img.shields.io/badge/Status-Development-success)
-![License](https://img.shields.io/badge/License-MIT-orange)
+> A futuristic JARVIS-style AI operating assistant powered by local LLMs, advanced backend architecture, and intelligent orchestration.
 
 ---
 
 # 🌌 Overview
 
-JARVIS AI OS is a next-generation AI assistant inspired by Tony Stark’s JARVIS from Marvel.
+VRINDA AI is an enterprise-grade AI assistant system inspired by Tony Stark’s JARVIS.
 
-Unlike traditional chatbots, this project aims to create a real AI operating ecosystem capable of:
+This project is not just a chatbot.  
+The goal is to build a fully modular AI ecosystem capable of:
 
 - 🧠 Natural conversation
-- 🎙️ Voice interaction
-- 💾 Long-term memory
+- 💾 Memory retention
+- 🎙 Voice interaction
 - 🤖 Multi-agent collaboration
-- ⚡ System automation
+- 🖥 System automation
 - 🌐 Internet research
-- 🖥️ Operating system control
 - 📂 File management
-- 🧩 Autonomous workflows
-- 🔐 Secure execution
-- 🚀 Real-time reasoning
-- 🛠️ Coding assistance
-
-The vision is to build an AI Operating System that behaves like a personal autonomous intelligence layer.
-
----
-
-# ✨ Features
-
-## 🧠 AI Core
-- Conversational AI Engine
-- Multi-Agent Architecture
-- Real-Time Reasoning
-- Context Awareness
-- Goal Planning System
-
-## 💾 Memory System
-- Long-Term Memory
-- Vector Database Storage
-- Context Retrieval
-- Episodic Memory
-- Semantic Search
-
-## 🎙️ Voice Assistant
-- Wake Word Detection
-- Speech-to-Text
-- Text-to-Speech
-- Real-Time Voice Streaming
-
-## ⚡ Automation
-- Browser Automation
-- File Management
-- OS Interaction
-- Workflow Execution
-- Task Scheduling
-
-## 🌐 Research System
-- Web Search Agent
-- AI Research Assistant
-- Summarization Engine
-- Intelligent Knowledge Retrieval
-
-## 🔐 Security
-- Sandboxed Execution
-- Permission Control
-- Authentication System
-- Encrypted Memory
+- 🧩 Tool orchestration
+- 🛡 Secure execution
+- ⚡ Real-time reasoning
+- 🧬 Continuous learning
+- 🚀 Futuristic AI operating experience
 
 ---
 
-# 🏗️ Architecture
+# 🏗 Current Architecture
 
 ```text
-                    ┌─────────────────────┐
-                    │     USER INPUT      │
-                    │ Voice / Text / GUI  │
-                    └──────────┬──────────┘
-                               │
-                    ┌──────────▼──────────┐
-                    │  Conversational AI  │
-                    │   Context Engine    │
-                    └──────────┬──────────┘
-                               │
-               ┌───────────────┼────────────────┐
-               │               │                │
-      ┌────────▼──────┐ ┌──────▼──────┐ ┌──────▼──────┐
-      │ Memory Engine │ │ Planner AI  │ │ Agent Router│
-      └────────┬──────┘ └──────┬──────┘ └──────┬──────┘
-               │               │                │
-     ┌─────────▼────────┐ ┌────▼────┐ ┌────────▼────────┐
-     │ Vector Databases │ │ Reasoner│ │ Specialized AI  │
-     │ Episodic Memory  │ │ Engine  │ │ Agents          │
-     └─────────┬────────┘ └────┬────┘ └────────┬────────┘
-               │               │                │
-               └──────┬────────┴────────┬───────┘
-                      │                 │
-           ┌──────────▼───────┐ ┌──────▼────────┐
-           │ Tool Execution   │ │ Automation    │
-           │ Framework        │ │ Engine        │
-           └──────────┬───────┘ └──────┬────────┘
-                      │                 │
-        ┌─────────────▼─────────────┐
-        │ OS / Browser / Devices    │
-        └───────────────────────────┘
+User
+   ↓
+FastAPI Backend
+   ↓
+API Routes
+   ↓
+LLM Service
+   ↓
+Ollama API
+   ↓
+Llama3 Local Model
+   ↓
+AI Response
 ```
 
 ---
 
-# 🛠️ Tech Stack
+# 🚀 Tech Stack
 
-## Frontend
-- Next.js
-- React
-- Tailwind CSS
-- Framer Motion
-- Three.js
-
-## Backend
+## 🧠 AI & Backend
+- Python 3.12
 - FastAPI
-- Node.js
-- WebSockets
-- REST APIs
-
-## AI Stack
-- OpenAI API
-- LangChain
-- LangGraph
-- CrewAI
 - Ollama
-- Whisper
+- Llama3
+- Pydantic
+- Requests
 
-## Databases
-- PostgreSQL
-- Redis
-- Qdrant / Pinecone
-- MongoDB
-
-## DevOps
-- Docker
-- Kubernetes
-- GitHub Actions
+## 🛠 Development
+- PyCharm Professional
+- GitHub
+- Swagger UI
+- Uvicorn
 
 ---
 
-# 📂 Project Structure
+# 📁 Project Structure
 
-```bash
-jarvis-ai-os/
+```text
+backend/
 │
-├── frontend/
-├── backend/
-├── agents/
-├── memory/
-├── voice/
-├── automation/
-├── plugins/
-├── docs/
-├── docker/
-├── scripts/
-└── README.md
+├── config/
+│   ├── constants.py
+│   ├── environment.py
+│   └── settings.py
+│
+├── core/
+│   ├── dependencies.py
+│   ├── lifecycle.py
+│   ├── security.py
+│   └── startup.py
+│
+├── routes/
+│   ├── agents.py
+│   ├── chat.py
+│   ├── health.py
+│   ├── memory.py
+│   └── voice.py
+│
+├── schemas/
+│   ├── agent_schema.py
+│   ├── chat_schema.py
+│   ├── memory_schema.py
+│   └── voice_schema.py
+│
+├── services/
+│   ├── automation_service.py
+│   ├── llm_service.py
+│   ├── memory_service.py
+│   ├── orchestration_service.py
+│   └── voice_service.py
+│
+├── utils/
+│   ├── formatter.py
+│   ├── helpers.py
+│   ├── logger.py
+│   └── validators.py
+│
+├── .env
+├── .gitignore
+└── main.py
 ```
 
 ---
 
-# 🚀 Getting Started
+# ✅ Features Completed
 
-## 1️⃣ Clone Repository
+- ✅ FastAPI backend setup
+- ✅ Professional backend architecture
+- ✅ Route-based API system
+- ✅ Pydantic schema validation
+- ✅ Service-layer architecture
+- ✅ Ollama integration
+- ✅ Local Llama3 AI setup
+- ✅ Local AI response generation
+- ✅ Swagger documentation
+- ✅ GitHub integration
+- ✅ Offline AI pipeline
+
+---
+
+# 🧠 Current AI Capabilities
+
+VRINDA AI can currently:
+
+- Generate intelligent responses
+- Run completely locally
+- Use Llama3 through Ollama
+- Process prompts through API routes
+- Work without paid AI APIs
+- Handle modular backend orchestration
+
+---
+
+# 🔥 API Endpoint
+
+## Chat Endpoint
+
+```http
+POST /chat
+```
+
+### Example Request
+
+```json
+{
+  "message": "Hello VRINDA"
+}
+```
+
+### Example Response
+
+```json
+{
+  "response": "Hello! I am VRINDA AI..."
+}
+```
+
+---
+
+# ⚡ Running The Project
+
+## 1️⃣ Start Ollama
 
 ```bash
-git clone https://github.com/your-username/jarvis-ai-os.git
-cd jarvis-ai-os
+ollama serve
 ```
 
 ---
 
-## 2️⃣ Install Dependencies
+## 2️⃣ Run Llama3
 
 ```bash
-npm install
+ollama run llama3
 ```
 
-or
+---
+
+## 3️⃣ Start Backend
 
 ```bash
-pip install -r requirements.txt
+uvicorn main:app --reload
 ```
 
 ---
 
-## 3️⃣ Setup Environment Variables
+## 4️⃣ Open Swagger Docs
 
-Create `.env`
-
-```env
-OPENAI_API_KEY=your_api_key
-DATABASE_URL=your_database_url
-REDIS_URL=your_redis_url
+```text
+http://127.0.0.1:8000/docs
 ```
 
 ---
 
-## 4️⃣ Start Development Server
+# 🧬 Future Roadmap
 
-```bash
-npm run dev
-```
+## 🧠 AI Memory System
+- Short-term memory
+- Long-term memory
+- Context awareness
+- Vector database integration
 
-or
+## 🎙 Voice Assistant
+- Speech-to-text
+- Text-to-speech
+- Wake-word detection
 
-```bash
-python main.py
-```
+## 🤖 Multi-Agent System
+- Planning agents
+- Research agents
+- Coding agents
+- Automation agents
 
----
+## 🖥 Automation Engine
+- Desktop automation
+- Browser automation
+- Workflow execution
 
-# 🧠 Future Goals
+## 🌐 Advanced AI Features
+- Internet research
+- File intelligence
+- AI reasoning engine
+- Continuous learning pipeline
 
-- Autonomous AI agents
-- Full desktop control
-- Smart home integration
-- Offline AGI mode
-- Robotics integration
-- Self-learning memory system
-- Real-time collaborative agents
-
----
-
-# 🤝 Contributing
-
-Contributions are welcome!
-
-1. Fork the repository
-2. Create your feature branch
-3. Commit your changes
-4. Push to the branch
-5. Open a Pull Request
-
----
-
-# 📜 License
-
-This project is licensed under the MIT License.
+## 🎨 Futuristic UI
+- AI dashboard
+- Real-time system visualization
+- JARVIS-style animations
 
 ---
 
-# 🌟 Inspiration
+# 🛡 Vision
 
-Inspired by:
-- Marvel JARVIS
-- AGI Research
-- Autonomous AI Systems
-- Futuristic Human-AI Interaction
+The long-term vision of VRINDA AI is to become:
+
+> A fully autonomous AI operating system capable of intelligent reasoning, memory, automation, and human-like interaction.
 
 ---
 
-# 👨‍💻 Author
+# 👨‍💻 Developer
 
-Developed with ❤️ by **Your Name**
+Built with passion, futuristic vision, and AI engineering curiosity 🚀
+
+### Creator
+Abhinay Srivastava
 
 ---
 
-# ⭐ Support
+# 🌟 VRINDA AI
 
-If you like this project, give it a star ⭐ on GitHub!
+> “More than a chatbot.  
+> An evolving AI ecosystem.”
