@@ -1,11 +1,14 @@
 
 
 from pydantic import BaseModel
+from typing import List
 
 
-class MemoryRequest(BaseModel):
+class Message(BaseModel):
+    role: str
     content: str
 
 
-class MemoryResponse(BaseModel):
-    status: str
+class ConversationMemory(BaseModel):
+    session_id: str
+    messages: List[Message]
