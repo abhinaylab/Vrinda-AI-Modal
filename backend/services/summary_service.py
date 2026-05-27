@@ -9,6 +9,7 @@ class SummaryService:
 
     SUMMARY_TRIGGER = 20
 
+
     llm_service = LLMService()
 
     @staticmethod

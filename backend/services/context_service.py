@@ -1,4 +1,5 @@
 from services.memory_service import MemoryService
+from services.summary_service import SummaryService
 
 
 class ContextService:
@@ -28,6 +29,10 @@ class ContextService:
 
         recent_history = history[-ContextService.MAX_HISTORY:]
 
+        summary = SummaryService.load_summary(
+            session_id
+        )
+
         messages = [
             {
                 "role": "system",
@@ -35,6 +40,20 @@ class ContextService:
             }
         ]
 
+        # Inject long-term summary memory
+        if summary:
+            messages.append(
+                {
+                    "role": "system",
+                    "content": f"""
+                    Previous conversation summary:
+
+                    {summary}
+                    """
+                }
+            )
+
+        # Add recent conversation history
         messages.extend(recent_history)
 
         return messages

@@ -8,6 +8,7 @@ from schemas.chat_schema import (
 from services.llm_service import LLMService
 from services.memory_service import MemoryService
 from services.context_service import ContextService
+from services.summary_service import SummaryService
 
 router = APIRouter()
 
@@ -23,6 +24,20 @@ async def chat(request: ChatRequest):
         role="user",
         content=request.message
     )
+
+    # Auto summary generation
+    if SummaryService.should_summarize(
+        request.session_id
+    ):
+
+        summary = SummaryService.generate_summary(
+            request.session_id
+        )
+
+        SummaryService.save_summary(
+            request.session_id,
+            summary
+        )
 
     # Build smart context
     context = ContextService.build_context(
@@ -41,7 +56,6 @@ async def chat(request: ChatRequest):
         content=response["response"]
     )
 
-    # Return response
     return ChatResponse(
         response=response["response"]
     )
